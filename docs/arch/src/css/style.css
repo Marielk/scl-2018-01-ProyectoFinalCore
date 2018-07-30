@@ -1,0 +1,27 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* Botones custom */
+.btn-custom {
+  background-color: #F16420;
+  color: #ffffff;
+  border-radius: 0%;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Funcionalidad Aparecer y Desaparecer */
+.disappear {
+  display: none;
+}
+
+.show {
+  display: block;
+}
