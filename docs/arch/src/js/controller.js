@@ -1,33 +1,30 @@
-//incializando firebase cloud firestore
-var firestore = firebase.firestore();
-const settings = { timestampsInSnapshots: true }; //activar registro de tiempo 
-firestore.settings(settings);
-
+const database = firebase.database();
 window.currentVisitorRegistration = () => {
+  /* crear id para cada visitante */
+  const newVisitorId = database.ref().child('post').push().key;
+  const startedAt = firebase.database.ServerValue.TIMESTAMP;
+  // añadiendo una nueva coleccion
+  database.ref(`visitors/${newVisitorId}`).set({
+      id: newVisitorId,
+      name: 'mariel',
+      rut: '17.834.887-6',
+      visitorType: 'visita',
+      arrivingTime: new Date(),
+      goingTo: 'Laboratoria',
+      contact: 'Carla Cruz',
+      host: 'pepito Perez',
+      licensePlate: 'ASFJASF3741934',
+  });
+};
 
-  //crear id para cada visitante 
-  const newVisitorId = firestore.collection("visitors").ref().child('visitor').push().key;
-  const startedAt = firebase.collection("visitors").ServerValue.TIMESTAMP;
-  firestore.collection("visitors").onSnapshot((querySnapshot) => {
-          
-    querySnapshot.forEach((doc) => {
-      
-      let name = firestore.data().name;
-      //añadiendo una nueva coleccion
-      firestore.collection("visitor").add({
-        id: newVisitorId,
-        name : ,
-        rut:  ,
-        visitorType : ,
-        arrivingTime : ,
-        goingTo : ,
-        host : ,
-        licensePlate : 
-      }) 
-  
-  
- 
-    }
-    return currentVisitor;
-  }
+function validatePersonIdentity(){
+  const rut = '17834887-6';
+	fetch(`https://api.rutify.cl/search?q=${rut}`)
+	.then(response => response.json())
+	.then(data => { 
+    console.log(data[0].name); // nombre completo de la visita sacado de la API   
+	})
+	.catch((e) => {
+	 console.log(e);
+	});
 }
