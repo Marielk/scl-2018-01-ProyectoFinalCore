@@ -12,7 +12,6 @@
     "build": "webpack --mode=production",
     "start": "webpack-dev-server --content-base dist/ --mode=development"
   },
-  
   "repository": {
     "type": "git",
     "url": "marielk"
@@ -34,5 +33,9 @@
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "firebase-mock-v3": "^0.1.3"
   }
 }
