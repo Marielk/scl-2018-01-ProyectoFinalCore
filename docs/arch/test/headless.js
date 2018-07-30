@@ -10,6 +10,6 @@ global.firebase = firebasemock.MockFirebaseSdk(
   path => path ? mockdatabase.child(path) : mockdatabase,
   () => mockauth,
 );
-require('../../src/js/controller.js');
+require('../src/js/controller.js');
 
 require('./controller.spec.js');
