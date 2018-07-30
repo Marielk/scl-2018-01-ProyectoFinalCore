@@ -1,7 +1,7 @@
 const database = firebase.database();
 window.currentVisitorRegistration = () => {
   /* crear id para cada visitante */
-  const newVisitorId = database.ref().child('post').push().key;
+  const newVisitorId = database.ref().child('visitor').push().key;
   const startedAt = firebase.database.ServerValue.TIMESTAMP;
   // añadiendo una nueva coleccion
   database.ref(`visitors/${newVisitorId}`).set({
