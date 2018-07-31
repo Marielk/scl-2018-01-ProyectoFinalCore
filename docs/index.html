@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+  <!-- Required meta ags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
@@ -13,9 +13,9 @@
 </head>
 
 <body>
-  <!-- Landing Page -->
-  <section id="starterPage">
-    <div class="container-fluid disappear">
+  <div class="container-fluid m-0 p-0" id="generalContainer">
+    <!-- Landing Page -->
+    <section id="starterPage" class="disappear">
       <div class="row mt-5">
         <div class="col-md-6 text-center mx-auto my-5">
           <img class="img-fluid" src="src/img/ifVisitor-logo.png" alt="ifVisitor-logo">
@@ -27,177 +27,235 @@
           <button class="btn btn-block btn-custom mx-auto d-block mt-5">Visitante Frecuente</button>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <header class="banner">
-    <div class="row">
-        <div class="col-md-12">
-      <h1>Cuéntanos más acerca de ti</h1>
- </header>
+    </section>
 
- <!-- Register visitor pag 1 -->
- <section class="register disappear">
-  <div class="form-group ml-5 mr-5">
-    <label for="rut" class="control-label"></label>
-    <input type="text" name="rut" class="form-control" id="rut" placeholder="Rut (obligatorio)">
-  </div>
-  <div class="form-group ml-5 mr-5">
-    <label for="email" class="control-label"></label>
-    <input type="text" name="email" class="form-control" id="email" placeholder="Email">
-  </div>
-  <div class="form-group ml-5 mr-5">
-    <label for="patente" class="control-label"></label>
-    <input type="text" name="patente" class="form-control" id="patente" placeholder="Si tiene vehículo ingrese su patente, por favor (obligatorio)">
-  </div>
-  <div class="form-group ml-5 mr-5">
-    <label for="patente" class="control-label"></label>
-    <input type="text" name="patente" class="form-control" id="nameVisitor" placeholder="¿A quién visitas?">
-  </div>
-  </div>
-</section>
-  <!-- Buttons preview and next -->
-  <section id="buttons">
-  <div class="container-fluid disappear">
-      <div class="row">
-        <div class="col-md 4">
-         <img src="src/img/cl-chevron-left.svg 3.png"  id="btnLeft"alt="">
-        </div>
-        <div class="col-md 4">
+    <!-- Register visitor -->
+    <div id="personalUserInfo" class="disappear">
+      <header class="banner">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Cuéntanos más acerca de ti</h1>
           </div>
-        <div class="col-md 4">
-          <img src="src/img/Group 4.png" id="btnRight" alt="">
         </div>
-      </div>
-    </div>
-  </section>
-
-<!-- Register visitor pag 2 -->
-<section id="register2">
-    <div class="row">
-    <div class="col-md-12 mt-2 disappear">
-   <div class="form-group mt-3 mx-auto">
-      <label for="dropdown-test" class="control-label"></label>
-      <select class="form-control" name="dropdown-test">
-      <option>Seleccione la empresa a donde va (obligatorio)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-    </div>
-    <div class="col-md-12 disappear">
-        <div class="form-group mt-3  mx-auto">
-           <label for="dropdown-test" class="control-label"></label>
-           <select class="form-control" name="dropdown-test" id="input2">
-           <option>Motivo de la visita</option>
-           <option>Reunión</option>
-           <option>Arriendo espacio</option>
-           <option>Entrevista</option>
-           <option>Otro</option>
-         </select>
-       </div>
-         </div>
-  </section>
-  <!-- Buttons preview and next -->
-  <section id="buttons">
-      <div class="container-fluid disappear">
+      </header>
+      <section class="p-3">
+        <div class="form-group m-5">
+          <label for="rutUser" class="control-label"></label>
+          <input type="text" name="rut" class="form-control" id="rutUser" placeholder="Ingrese su Rut sin puntos ni guión (OBLIGATORIO)">
+        </div>
+        <div class="form-group m-5">
+          <label for="emailUser" class="control-label"></label>
+          <input type="text" name="email" class="form-control" id="emailUser" placeholder="Email">
+        </div>
+        <div class="form-group m-5">
+          <label for="licensePUser" class="control-label"></label>
+          <input type="text" name="patente" class="form-control" id="licensePUser" placeholder="Si viene en vehículo ingrese la patente (OBLIGATORIO)">
+        </div>
+        <div class="form-group m-5">
+          <label for="localHost" class="control-label"></label>
+          <input type="text" name="patente" class="form-control" id="localHost" placeholder="¿A quién visitas?">
+        </div>
+      </section>
+      <!-- Buttons preview and next -->
+      <section>
+        <div class="container mt-5 text-center">
           <div class="row">
-            <div class="col-md 4">
-             <img src="src/img/cl-chevron-left.svg 3.png"  id="btnLeft"alt="">
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/cl-chevron-left.svg 3.png" id="firstBackBtn" alt="firstBackBtn">
             </div>
-            <div class="col-md 4">
-              </div>
-            <div class="col-md 4">
-              <img src="src/img/Group 4.png" id="btnRight" alt="">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/Group 4.png" id="firstForwardBtn" alt="firstForwardBtn">
             </div>
           </div>
         </div>
       </section>
+    </div>
 
-  <!-- Términos y condiciones-->
-  <section id="textConditions" class="mt-5 disappear">
-      <h2 style="text-align: center;"><strong>Política de privacidad</strong></h2><p>&nbsp;</p><p>El presente Política de Privacidad establece los términos en que iF blanco usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p><p><strong>Información que es recogida</strong></p><p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp; su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p><p><strong>Uso de la información recogida</strong></p><p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p><p>iF blanco está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p><p><p><strong>Control de su información personal</strong></p><p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.&nbsp; Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico. &nbsp;En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.</p><p>Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p><p>iF blanco Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>
+
+    <!-- Register visitor pag 2 -->
+    <div id="purposeUserInfo" class="disappear">
+      <header class="banner">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Cuéntanos porqué nos visitas</h1>
+          </div>
+        </div>
+      </header>
+      <section class="p-3">
+        <div class="row m-5">
+          <div class="col-md-12">
+            <div class="form-group mx-auto">
+              <label for="dropdown-test" class="control-label"></label>
+              <select class="form-control" name="dropdown-test">
+                <option>Seleccione la empresa a donde va (obligatorio)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-md-12">
+            <div class="form-group mx-auto">
+              <label for="dropdown-test" class="control-label"></label>
+              <select class="form-control" name="dropdown-test" id="input2">
+                <option>Motivo de la visita</option>
+                <option>Reunión</option>
+                <option>Arriendo espacio</option>
+                <option>Entrevista</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Buttons preview and next -->
+      <section>
+        <div class="container mt-5 text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/cl-chevron-left.svg 3.png" id="secondBackBtn" alt="secondBackBtn">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/Group 4.png" id="secondForwardBtn" alt="secondForwardBtn">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Términos y condiciones-->
+    <section id="textConditions">
+      <header class="banner">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Política de Privacidad</h1>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <p>&nbsp;</p>
+        <p>La presente Política de Privacidad establece los términos en que <strong>iF Blanco</strong> usa y protege la información que es proporcionada
+          por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos
+          de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado,
+          lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política
+          de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente
+          esta página para asegurarse que está de acuerdo con dichos cambios.</p>
+        <p>
+          <strong>Información que es recogida</strong>
+        </p>
+        <p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp;
+          su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida
+          información específica para procesar algún pedido o realizar una entrega o facturación.</p>
+        <p>
+          <strong>Uso de la información recogida</strong>
+        </p>
+        <p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para
+          mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es
+          posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales,
+          nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún
+          beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados
+          en cualquier momento.
+        </p>
+        <p><strong>iF Blanco</strong> está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los
+          sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p>
+        <p>
+          <strong>Control de su información personal</strong>
+        </p>
+        <p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada
+          a nuestro sitio web.&nbsp; Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede
+          marcar o desmarcar la opción de recibir información por correo electrónico. &nbsp;En caso de que haya marcado la
+          opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.</p>
+        <p>Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento,
+          salvo que sea requerido por un juez con un orden judicial.</p>
+        <p><strong>iF Blanco</strong> Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>
+      </div>
       <div class="row">
         <div class="col-md-6 my-5 mx-auto">
-      <button type="button" class="btn btn-secondary mx-auto d-block btn-sm">Aceptar</button>
-    </div>
-  </section>
-
-  <!-- Captura foto -->
-
+          <button type="button" class="btn btn-custom mx-auto d-block btn-sm">Aceptar</button>
+        </div>
+      </div>
+    </section>
 
   <!-- Página visitante frecuente -->
   <section class="">
-      <div class="form-group mt-2 disappear">
-          <label for="rut" class="control-label"></label>
-          <input type="text" name="" class="form-control" id="" placeholder="Rut (obligatorio)">
+    <div class="form-group mt-2 disappear">
+        <label for="rut" class="control-label"></label>
+        <input type="text" name="" class="form-control" id="" placeholder="Rut (obligatorio)">
+      </div>
+    <div class="row">
+        <div class="col-md-12">
+       <div class="form-group mt-3 mx-auto disappear">
+          <label for="dropdown-test" class="control-label"></label>
+          <select class="form-control" name="dropdown-test" id="selectEmpresa">
+          <option>Seleccione la empresa a donde va (obligatorio)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
         </div>
+      </div>
       <div class="row">
-          <div class="col-md-12">
-         <div class="form-group mt-3 mx-auto disappear">
-            <label for="dropdown-test" class="control-label"></label>
-            <select class="form-control" name="dropdown-test" id="selectEmpresa">
-            <option>Seleccione la empresa a donde va (obligatorio)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 disappear">
-              <div class="form-group mt-3 mx-auto">
-                 <label for="dropdown-test" class="control-label"></label>
-                 <select class="form-control" name="dropdown-test" id="selectVisit">
-                 <option>Motivo de la visita</option>
-                 <option>Reunión</option>
-                 <option>Arriendo espacio</option>
-                 <option>Entrevista</option>
-                 <option>Otro</option>
-               </select>
+        <div class="col-md-12 disappear">
+            <div class="form-group mt-3 mx-auto">
+               <label for="dropdown-test" class="control-label"></label>
+               <select class="form-control" name="dropdown-test" id="selectVisit">
+               <option>Motivo de la visita</option>
+               <option>Reunión</option>
+               <option>Arriendo espacio</option>
+               <option>Entrevista</option>
+               <option>Otro</option>
+             </select>
+           </div>
              </div>
-               </div>
-              </div>
+            </div>
 <!-- Fin registro visitante frecuente -->
 
-  <!-- Buttons preview and next -->
-  <section id="buttons">
-      <div class="container-fluid disappear">
-          <div class="row">
-            <div class="col-md 4">
-             <img src="src/img/cl-chevron-left.svg 3.png"  id="btnLeft"alt="">
+<!-- Buttons preview and next -->
+<section id="buttons">
+    <div class="container-fluid disappear">
+        <div class="row">
+          <div class="col-md 4">
+           <img src="src/img/cl-chevron-left.svg 3.png"  id="btnLeft"alt="">
+          </div>
+          <div class="col-md 4">
             </div>
-            <div class="col-md 4">
-              </div>
-            <div class="col-md 4">
-              <img src="src/img/Group 4.png" id="btnRight" alt="">
-            </div>
+          <div class="col-md 4">
+            <img src="src/img/Group 4.png" id="btnRight" alt="">
           </div>
         </div>
-      </section>
-      
-    <!-- Pantalla notificación llegada -->
-    <section class="">
-      <div class="row">
-        <div class="col-md 4 mx-auto display-4">
-          <p id="textVisit">Por favor espere mientras se confirma su visita</p>
+      </div>
+    </section>
+    
+  <!-- Pantalla notificación llegada -->
+  <section class="">
+    <div class="row">
+      <div class="col-md 4 mx-auto display-4">
+        <p id="textVisit">Por favor espere mientras se confirma su visita</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md 4 mx-auto">
+      <img src="src/img/if-logo.png" id="logoLoading" alt="logoLoading">
     </div>
   </div>
-  <div class="row">
-    <div class="col-md 4 mx-auto">
-        <img src="src/img/if-logo.png" id="logoLoading" alt="logoLoading">
-      </div>
-    </div>
 
-    </section>
+  </section>
+  </div>
+
+  
 
 
   <!-- Inicializando Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -209,12 +267,7 @@
       messagingSenderId: "943782866392"
     };
     firebase.initializeApp(config);
-</script>
-  <title>iF-Visitor</title>
-</head>
-
-<body>
-
+  </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
