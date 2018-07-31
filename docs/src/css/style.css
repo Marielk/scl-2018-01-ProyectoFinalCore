@@ -144,7 +144,7 @@ margin-top: 8rem;
 
 
 
-/* Ingreso visitante */
+/* Ingreso visitante select*/
 
 #selectEmpresa{
   margin-top: 3em;
@@ -156,6 +156,22 @@ margin-top: 8rem;
 }
 
 /* Cierre ingreso visitante */
+
+
+/* Pantalla notificación llegada */
+
+#textVisit{
+  margin-top: 3em;
+  margin-left: 1em;
+}
+
+#logoLoading{
+  
+}
+
+
+
+
 
 
 
