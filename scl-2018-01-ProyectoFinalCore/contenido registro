@@ -1,0 +1,14 @@
+Contenido del Registro 
+
+nombre (debe ser un nombre valido y coincidir con el rut) 
+rut (//)
+
+hora de ingreso (deberia registrarse automatico) 
+
+tipo de visitante (visita, cliente, proveedor) 
+
+hacia donde va (laboratoria, aquaslab, mustakis, etc.) 
+
+a quien va a ver (nombre de la persona deberia coincidir con los nombres registrados en la lista predeterminada) 
+
+(si viene en auto) patente (deberia ser valida)  

@@ -1,0 +1,11 @@
+Arquitectura de la inf
+
+Es como diseñar el plano de un edificio antes de construirlo
+No importa mucho el "que" si no el "como"
+
+Pruebas Unitarias
+Se crean para probar "funciones puras" dividiendo el codigo en pedacitos 
+
+las vistas son funciones puras que reciben un objeto "prop" y retornan un pedacito de DOM para mostrar en la pantalla 
+
+ 
