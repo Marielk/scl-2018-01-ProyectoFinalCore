@@ -1,0 +1,54 @@
+[debug] [2018-07-31T01:25:49.641Z] ----------------------------------------------------------------------
+[debug] [2018-07-31T01:25:49.644Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-07-31T01:25:49.644Z] CLI Version:   4.0.1
+[debug] [2018-07-31T01:25:49.644Z] Platform:      linux
+[debug] [2018-07-31T01:25:49.644Z] Node Version:  v10.7.0
+[debug] [2018-07-31T01:25:49.645Z] Time:          Mon Jul 30 2018 21:25:49 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:25:49.645Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-31T01:25:49.656Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-31T01:25:49.656Z] > authorizing via signed-in user
+[debug] [2018-07-31T01:25:49.658Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/if-visitor  
+  
+ Mon Jul 30 2018 21:25:49 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:28.955Z] ----------------------------------------------------------------------
+[debug] [2018-07-31T01:33:28.958Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-07-31T01:33:28.958Z] CLI Version:   4.0.1
+[debug] [2018-07-31T01:33:28.958Z] Platform:      linux
+[debug] [2018-07-31T01:33:28.959Z] Node Version:  v10.7.0
+[debug] [2018-07-31T01:33:28.959Z] Time:          Mon Jul 30 2018 21:33:28 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:28.959Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-31T01:33:28.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-31T01:33:28.970Z] > authorizing via signed-in user
+[debug] [2018-07-31T01:33:28.973Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/if-visitor  
+  
+ Mon Jul 30 2018 21:33:28 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:31.745Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T01:33:31.747Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/if-visitor/tokens  
+  
+ Mon Jul 30 2018 21:33:31 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:33.105Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T01:33:33.108Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/if-visitor  
+  
+ Mon Jul 30 2018 21:33:33 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:35.215Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/laboratoria/Escritorio/respaldo mariel/scl-2018-01-ProyectoFinalCore/docs/arch'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-07-31T01:33:40.440Z] Fetching environment
+[debug] [2018-07-31T01:33:40.443Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/943782866392:getServerAppConfig  
+  
+ Mon Jul 30 2018 21:33:40 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:40.444Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/943782866392/clients/_:getWebAppConfig  
+  
+ Mon Jul 30 2018 21:33:40 GMT-0400 (GMT-04:00)
+[debug] [2018-07-31T01:33:41.161Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T01:33:41.162Z] Starting @google-cloud/functions-emulator
+[debug] [2018-07-31T01:33:41.254Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-07-31T01:33:46.209Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
