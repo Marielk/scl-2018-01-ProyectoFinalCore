@@ -15,7 +15,7 @@
 <body>
   <div class="container-fluid m-0 p-0" id="generalContainer">
     <!-- Landing Page -->
-    <section id="starterPage" class="disappear">
+    <section id="starterPage" class="show">
       <div class="row mt-5">
         <div class="col-md-6 text-center mx-auto my-5">
           <img class="img-fluid" src="src/img/ifVisitor-logo.png" alt="ifVisitor-logo">
@@ -23,8 +23,8 @@
       </div>
       <div class="row">
         <div class="col-md-6 my-5 mx-auto">
-          <button class="btn btn-block btn-custom mx-auto d-block mb-5">Registrar mi visita</button>
-          <button class="btn btn-block btn-custom mx-auto d-block mt-5">Visitante Frecuente</button>
+          <button id="newRegistrationBtn" class="btn btn-block btn-custom mx-auto d-block mb-5">Registrar mi visita</button>
+          <button id="findRegistrationBtn" class="btn btn-block btn-custom mx-auto d-block mt-5">Visitante Frecuente</button>
         </div>
       </div>
     </section>
@@ -131,7 +131,7 @@
     </div>
 
     <!-- Términos y condiciones-->
-    <section id="textConditions">
+    <section id="textConditions" class="disappear">
       <header class="banner">
         <div class="row">
           <div class="col-md-12">
