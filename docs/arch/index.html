@@ -52,8 +52,8 @@
       <h1>Cuéntanos más acerca de ti</h1>
  </header>
 
- <!-- Register visitor -->
- <section class="register">
+ <!-- Register visitor pag 1 -->
+ <section class="register disappear">
   <div class="form-group ml-5 mr-5">
     <label for="rut" class="control-label"></label>
     <input type="text" name="rut" class="form-control" id="rut" placeholder="Rut (obligatorio)">
@@ -73,8 +73,8 @@
   </div>
 </section>
   <!-- Buttons preview and next -->
-  <section id="buttons">
-  <div class="container-fluid">
+  <section id="buttons disappear">
+  <div class="container-fluid disappear">
       <div class="row">
         <div class="col-md 4">
          <img src="src/img/cl-chevron-left.svg 3.png"  id="btnLeft"alt="">
@@ -86,6 +86,35 @@
         </div>
       </div>
     </div>
+  </section>
+
+<!-- Register visitor pag 2 -->
+<section id="register2">
+    <div class="row">
+    <div class="col-md-12 mt-2">
+   <div class="form-group mt-3 mx-auto">
+      <label for="dropdown-test" class="control-label"></label>
+      <select class="form-control" name="dropdown-test">
+      <option>Seleccione la empresa a donde va (obligatorio)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group mt-3  mx-auto">
+           <label for="dropdown-test" class="control-label"></label>
+           <select class="form-control" name="dropdown-test" id="input2">
+           <option>Motivo de la visita</option>
+           <option>Reunión</option>
+           <option>Arriendo espacio</option>
+           <option>Entrevista</option>
+           <option>Otro</option>
+         </select>
+       </div>
+         </div>
   </section>
 
   <!-- Inicializando Firebase -->
