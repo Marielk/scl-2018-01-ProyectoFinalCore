@@ -6,9 +6,12 @@ newRegistrationBtn.addEventListener('click', () => {
   personalUserInfo.classList.add('show');
 });
 
-/*findRegistration.addEventListener('click', () => {
- // Agregar cuando la pag esté lista
-});*/
+findRegistrationBtn.addEventListener('click', () => {
+  starterPage.classList.add('disappear');
+  starterPage.classList.remove('show');
+  frequentVisitor.classList.remove('disappear');
+  frequentVisitor.classList.add('show');
+});
 
 firstBackBtn.addEventListener('click', () => {
   personalUserInfo.classList.remove('show');
@@ -38,3 +41,23 @@ secondForwardBtn.addEventListener('click', () => {
   textConditions.classList.add('show');
 });
 
+acceptTerms.addEventListener('click', () => {
+  textConditions.classList.remove('show');
+  textConditions.classList.add('disappear');
+  arrivalNotification.classList.remove('disappear');
+  arrivalNotification.classList.add('show');
+});
+
+thirdBackBtn.addEventListener('click', () => {
+  frequentVisitor.classList.remove('show');
+  frequentVisitor.classList.add('disappear');
+  starterPage.classList.remove('disappear');
+  starterPage.classList.add('show');
+});
+
+thirdForwardBtn.addEventListener('click', () => {
+  frequentVisitor.classList.remove('show');
+  frequentVisitor.classList.add('disappear');
+  arrivalNotification.classList.remove('disappear');
+  arrivalNotification.classList.add('show');
+});
