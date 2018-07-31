@@ -94,18 +94,30 @@ select.form-control:focus {
   margin-bottom: 2rem;
 }
 
+
+input::placeholder {
+  color: #51D145;
+ }
 /* fin register */
 
 
 /* Buttons Preview and Next */
 #btnLeft{
-  width: 10em;
-  height: 10em;
+  width: 5em;
+  height: 5em;
+  
 }
 
 #btnRight{
-  width: 10em;
-  height: 10em;
+  width: 5em;
+  height: 5em;
+
+}
+
+#buttons{
+  margin-left: 7em;
+ 
+
 }
 
 
