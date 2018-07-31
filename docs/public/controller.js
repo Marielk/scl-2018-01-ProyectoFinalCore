@@ -6,8 +6,7 @@ const autentication = firebase.auth();
 const messaging = firebase.messaging();
 // Add the public key generated from the console here.
 messaging.usePublicVapidKey('BIvOtXyPXyEhUFgKw9JaE0E7noalpNJvyvmI2krSmf6JFbDzwN3hBOBrfqb2RRzKpCIvYGgrKhlq2-qsYyx2b6c');
-//Guardar al visitante actual 
-let currentVisitorID = [];
+
 window.currentVisitorRegistration = () => {
   /* crear id para cada visitante */
   const newVisitorId = database.ref().child('visitor').push().key;
@@ -24,7 +23,6 @@ window.currentVisitorRegistration = () => {
     host: 'pepito Perez',
     licensePlate: 'ASFJASF3741934',
   });
-  currentVisitorID.push(newVisitorId);
 };
 
 function validatePersonIdentity(){
@@ -85,13 +83,5 @@ function aceptNotifications(){
         uid: autentication.currentUser.uid
       });
     })
-    .catch((err) => console.log('usuario sin permiso', err));
-}
-
-function sendNotification(){
-  const message = `Hola ${autentication.currentUser.displayName}, te informamos que ${database.ref(`visitors/${currentVisitorID}`).name} esta en recepcion, confirma su entrada porfavor`; 
-  database.ref('/notifications').push({
-    user: autentication.currentUser.displayName,
-    message: message
-  });
+    .catch((err) => console.log('usuario sin permiso', err))
 }

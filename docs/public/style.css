@@ -1,0 +1,110 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#generalContainer {
+  height: 100vh;
+  width: auto;
+}
+
+/* Botones custom */
+.btn-custom {
+  background-color: #F16420;
+  color: #ffffff;
+  border-radius: 0%;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Funcionalidad Aparecer y Desaparecer */
+.disappear {
+  display: none;
+}
+
+.show {
+  display: block;
+
+}
+
+/*=============================================
+=            Section Banner           =
+=============================================*/
+
+.banner{
+  background-color: black;
+  width: 100%;
+  padding: 3vh;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-size: 2em; 
+}
+
+/*=====  End of Section comment block  ======*/
+
+
+/*=============================================
+=            Estilos input        =
+=============================================*/
+
+
+input[type="text"]::placeholder {
+  color: rgb(117, 109, 70);
+  font-size: 20px;
+ }
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(241, 102, 32, 0.342);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+/*=====  End of Section comment block  ======*/
+
+/* Buttons Preview and Next */
+.btnLeftAndRight{
+  width: 5em;
+  height: 5em;
+  
+}
+
+/* Register pag2 */
+
+#input2{
+margin-top: 8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
