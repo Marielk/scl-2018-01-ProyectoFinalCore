@@ -1,4 +1,8 @@
+// Llamar a database 
 const database = firebase.database();
+// Llamar a Firebase Messaging object.
+const messaging = firebase.messaging();
+
 window.currentVisitorRegistration = () => {
   /* crear id para cada visitante */
   const newVisitorId = database.ref().child('visitor').push().key;
