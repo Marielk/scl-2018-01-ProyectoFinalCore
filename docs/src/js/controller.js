@@ -1,5 +1,7 @@
 // Llamar a database 
 const database = firebase.database();
+// llamar a firebase usuarios autenticados
+const autentication = firebase.auth();
 // Llamar a Firebase Messaging object.
 const messaging = firebase.messaging();
 // Add the public key generated from the console here.
@@ -71,11 +73,10 @@ function userOn(){
 
 function aceptNotifications(){
   messaging.requestPermission()
-  .then(messaging.getToken()
-    .then(function(currentToken) {
+  .then(function() {
+    messaging.getToken(function(currentToken) {
       if (currentToken) {
-        sendTokenToServer(currentToken);
-        updateUIForPushEnabled(currentToken);
+        console.log(currentToken);
       } else {
         // Show permission request.
         console.log('No Instance ID token available. Request permission to generate one.');
@@ -87,8 +88,12 @@ function aceptNotifications(){
       console.log('An error occurred while retrieving token. ', err);
       showToken('Error retrieving Instance ID token. ', err);
       setTokenSentToServer(false);
-    })
+    });
+    console.log('Notification permission granted.');
+    // TODO(developer): Retrieve an Instance ID token for use with FCM.
+    // ...
+  })
   .catch(function(err) {
     console.log('Unable to get permission to notify.', err);
-  })
-)}
+  });
+}
