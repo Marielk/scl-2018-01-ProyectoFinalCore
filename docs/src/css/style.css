@@ -101,8 +101,6 @@ select.form-control:focus {
   margin-bottom: 2rem;
 }
 
-
-
 /* fin register */
 
 
@@ -110,7 +108,6 @@ select.form-control:focus {
 #btnLeft{
   width: 5em;
   height: 5em;
-  
 }
 
 #btnRight{
@@ -124,7 +121,6 @@ select.form-control:focus {
 }
 
 #register2{
-  
 }
 
 
@@ -133,6 +129,31 @@ select.form-control:focus {
 #input2{
 margin-top: 8rem;
 }
+
+
+/* Términos y condiciones */
+.btn-secondary{
+  background-color: #F16420;
+  color: #ffffff;
+  border-radius: 0%;
+  border: #F16420;
+  font-size: 1rem;
+}
+
+/* fin terminos y condiciones */
+
+
+
+/* Ingreso visitante */
+
+
+#selectVisit{
+  margin-top: 3em;
+}
+
+
+
+
 
 
 
