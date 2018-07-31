@@ -8,6 +8,11 @@ body {
   min-width: 100vw;
 }
 
+#generalContainer {
+  height: 100vh;
+  width: auto;
+}
+
 /* Botones custom */
 .btn-custom {
   background-color: #F16420;
@@ -76,57 +81,12 @@ select.form-control:focus {
 
 /*=====  End of Section comment block  ======*/
 
-
-/* Register */
-
-.register{
-  padding: 3em;
-  margin-top: -2rem;
-
-}
-
-#rut{
-  margin-bottom: 2rem;
-}
-
-#email{
-  margin-bottom: 2rem;
-}
-
-#patente{
-  margin-bottom: 2rem;
-}
-
-#nameVisitor{
-  margin-bottom: 2rem;
-}
-
-
-
-/* fin register */
-
-
 /* Buttons Preview and Next */
-#btnLeft{
+.btnLeftAndRight{
   width: 5em;
   height: 5em;
   
 }
-
-#btnRight{
-  width: 5em;
-  height: 5em;
-
-}
-
-#buttons{
-  margin-left: 7em;
-}
-
-#register2{
-  
-}
-
 
 /* Register pag2 */
 
