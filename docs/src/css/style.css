@@ -146,10 +146,21 @@ margin-top: 8rem;
 
 /* Ingreso visitante */
 
+#selectEmpresa{
+  margin-top: 3em;
+}
 
 #selectVisit{
   margin-top: 3em;
+  margin-bottom: 5em;
 }
+
+/* Cierre ingreso visitante */
+
+
+
+
+
 
 
 
