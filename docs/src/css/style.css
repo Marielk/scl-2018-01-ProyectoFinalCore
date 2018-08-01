@@ -128,9 +128,224 @@ margin-top: 8rem;
   margin-left: 1em;
 }
 
-#logoLoading{
-  
+
+/*=============================================
+=           Página administración          =
+=============================================*/
+
+
+:root {
+  --bg-color: rgba(172, 183, 189, 0.246);
+  --theme-color: rgb(24, 30, 34);
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-size: 1.6rem;
 }
+
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+}
+
+em {
+  font-style: italic
+}
+
+small {
+  font-size: 80%;
+}
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main {
+  background-color: #fff;
+  box-shadow: 0px 1px 5px 0 rgba(0, 162, 249, 0.3);
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+footer {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Buttons ======================== */
+
+button {
+  background-color: #F16420;
+  height: 30px;
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 10px;
+  outline: none;
+  margin-top: 2em;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+}
+
+button img {
+  height: 1em;
+}
+
+/* Form ======================== */
+
+form {
+  margin-top: 40px;
+}
+
+form div {
+  display: flex;
+}
+
+form textarea,
+form button {
+  height: 90px;
+  margin-top: 2.5em;
+}
+
+@media (min-width: 400px) {
+  form textarea,
+  form button {
+    height: 70px;
+  }
+}
+
+@media (min-width: 550px) {
+  form textarea,
+  form button {
+    height: 50px;
+  }
+}
+
+form textarea {
+  width: 100%;
+  padding: 5px;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--bg-color);
+  border: 0;
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+form button {
+  padding: 0 20px;
+  margin-left: 10px;
+  background-color: var(--theme-color);
+}
+
+form button img {
+  height: 2em;
+}
+
+form small {
+  margin-top: 5px;
+  display: block;
+}
+
+
+/*=====  Fin página administración  ======*/
+
+
+
+/*=============================================
+=           Estilos admin        =
+=============================================*/
+
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, cite, code, em, img, q,
+small, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, section, summary,
+time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  left: -9999px;
+  top: -9999px;
+
+
+/*===== Fin estilos admin  ======*/
 
 
 
