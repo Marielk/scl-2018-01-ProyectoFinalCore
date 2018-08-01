@@ -1,4 +1,7 @@
-# Proyecto Final Common Core
+# iF Visitor
+![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/img/ifVisitor-logo.png)
+
+
 ## Preámbulo
 El registro de visitantes en una empresa en América Latina es un proceso tedioso y manual. Lo común es que una persona esté en la recepción tomando nota - a veces con papel y lápiz - de cada visitante. Por razones de seguridad, usualmente piden a cada visitante dejar una identificación. Si vivimos en la era digital, ¿por qué seguimos registrando visitantes como si fuera 1985? ¿Qué tal si sustituimos a la persona en recepción por una tablet? ¿Qué tal si en lugar de pedir una identificación, tomamos una foto? 
 
@@ -34,9 +37,21 @@ También  nos dieron feedback, de que les gustaría ver en la aplicación, y que
 El feedback que nos dio la administradora con respecto a la aplicación, fue que al preguntar sobre si le gustaría que a los visitantes les sacaran una fotografía para identificarlos, dijo que no le parecía útil. Lo que más nos dejó en claro fue que, al momento de pedir los datos, recalcaramos la seguridad de estos. 
 Para ello nuestro punto de diferencia es que al momento en que el visitante ingrese el rut, se pueda verificar que realmente es un rut que existe. Esto se realiza a través de la api rut.
 
-Las pantallas modificadas son la de "soy" empresa o visita, la eliminamos porque despues en otra pantalla le pregunta al visitante el motivo por el cual va a iF.
+Las pantallas de "soy" empresa o visita, la eliminamos porque despues en otra pantalla le pregunta al visitante el motivo por el cual va a iF.
 
-![alt text]()
+![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/UX/captura%20pantalla%20prototipo/captura%20prototipo%20pantalla%20soy.png)
+
+En cuanto a diseño los botones estaban arriba, de acuerdo al feedback decidimos cambiarlos hacia abajo. (imagen diseño antes del feedback)
+
+![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/UX/captura%20pantalla%20prototipo/captura%20%20pantalla%20(registro).png)
+
+En cuanto a la toma de fotografías, también decidimos eliminar esa pantalla porque no le daba valor a Pilar (administradora), en cuanto a lo que ella necesita de iF y su seguridad. A algunos usuarios tampoco les gusta que les tomen fotografías al momento de registrarse en el lugar.
+
+![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/UX/captura%20pantalla%20prototipo/captura%20pantalla%20(foto).png)
+
+
+
+
 
 La paleta de colores utilizada fue la de iF Blanco. Colores usados Naranja, Negro, Blanco, Gris.
 
