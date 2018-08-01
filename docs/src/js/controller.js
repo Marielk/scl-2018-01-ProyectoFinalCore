@@ -99,7 +99,7 @@ function aceptNotifications(){
 }
 
 function sendNotification(){
-  const message = `Hola ${autentication.currentUser.displayName}, te informamos que ${database.ref(`visitors/${currentVisitorID}`).name} esta en recepcion, confirma su entrada porfavor`; 
+  const message = `Hola ${autentication.currentUser.displayName}, te informamos que ${database.ref(`visitors/${currentVisitorID}`).name} esta en recepción, confirma su entrada porfavor`; 
   database.ref('/notifications').push({
     localContact: autentication.currentUser.displayName,
     message: message
