@@ -1,5 +1,10 @@
 /* Global Variables */
-let rut, email, licensePlate, host, goingTo, visitPurpose;
+let rut; 
+let email; 
+let licensePlate;
+let host;
+let goingTo;
+let visitPurpose;
 
 /* Functionality Buttons */
 newRegistrationBtn.addEventListener('click', () => {
@@ -51,7 +56,7 @@ acceptTerms.addEventListener('click', () => {
   textConditions.classList.add('disappear');
   arrivalNotification.classList.remove('disappear');
   arrivalNotification.classList.add('show');
-  currentVisitorRegistration();
+  window.currentVisitorRegistration();
 });
 
 thirdBackBtn.addEventListener('click', () => {
@@ -69,12 +74,11 @@ thirdForwardBtn.addEventListener('click', () => {
 });
 
 function saveGlobalVariables() {
-  rutVisitor.value = rut;
-  emailVisitor.value = email;
-  licensePVisitor.value = licensePlate;
-  localHost.value = host;
-  business.value = goingTo;
-  purposeOfVisit.value = visitPurpose;
+  rut= document.getElementById('rutVisitor').value;
+  email= document.getElementById('emailVisitor').value;
+  licensePlate= document.getElementById('licensePVisitor').value;
+  host= document.getElementById('localHost').value;
+  goingTo= document.getElementById('business').value;
+  visitPurpose= document.getElementById('purposeOfVisit').value;
 }
 
-window.currentVisitorRegistration();

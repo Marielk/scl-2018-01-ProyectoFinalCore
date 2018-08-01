@@ -1,65 +1,212 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!doctype html>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.3.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.3.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.3.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<head>
+  <!-- Required meta ags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>iF-Visitor</title>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body>
+  <div class="container-fluid m-0 p-0" id="generalContainer">
+    <!-- Landing Page -->
+    <section id="starterPage" class="disappear">
+      <div class="row mt-5">
+        <div class="col-md-6 text-center mx-auto my-5">
+          <img class="img-fluid" src="src/img/ifVisitor-logo.png" alt="ifVisitor-logo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 my-5 mx-auto">
+          <button class="btn btn-block btn-custom mx-auto d-block mb-5">Registrar mi visita</button>
+          <button class="btn btn-block btn-custom mx-auto d-block mt-5">Visitante Frecuente</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register visitor -->
+    <div id="personalUserInfo" class="disappear">
+      <header class="banner">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Cuéntanos más acerca de ti</h1>
+          </div>
+        </div>
+      </header>
+      <section class="p-3">
+        <div class="form-group m-5">
+          <label for="rutUser" class="control-label"></label>
+          <input type="text" name="rut" class="form-control" id="rutUser" placeholder="Ingrese su Rut sin puntos ni guión (OBLIGATORIO)">
+        </div>
+        <div class="form-group m-5">
+          <label for="emailUser" class="control-label"></label>
+          <input type="text" name="email" class="form-control" id="emailUser" placeholder="Email">
+        </div>
+        <div class="form-group m-5">
+          <label for="licensePUser" class="control-label"></label>
+          <input type="text" name="patente" class="form-control" id="licensePUser" placeholder="Si viene en vehículo ingrese la patente (OBLIGATORIO)">
+        </div>
+        <div class="form-group m-5">
+          <label for="localHost" class="control-label"></label>
+          <input type="text" name="patente" class="form-control" id="localHost" placeholder="¿A quién visitas?">
+        </div>
+      </section>
+      <!-- Buttons preview and next -->
+      <section>
+        <div class="container mt-5 text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/cl-chevron-left.svg 3.png" id="firstBackBtn" alt="firstBackBtn">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/Group 4.png" id="firstForwardBtn" alt="firstForwardBtn">
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <!-- Register visitor pag 2 -->
+    <div id="purposeUserInfo" class="disappear">
+      <header class="banner">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Cuéntanos porqué nos visitas</h1>
+          </div>
+        </div>
+      </header>
+      <section class="p-3">
+        <div class="row m-5">
+          <div class="col-md-12">
+            <div class="form-group mx-auto">
+              <label for="dropdown-test" class="control-label"></label>
+              <select class="form-control" name="dropdown-test">
+                <option>Seleccione la empresa a donde va (obligatorio)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-md-12">
+            <div class="form-group mx-auto">
+              <label for="dropdown-test" class="control-label"></label>
+              <select class="form-control" name="dropdown-test" id="input2">
+                <option>Motivo de la visita</option>
+                <option>Reunión</option>
+                <option>Arriendo espacio</option>
+                <option>Entrevista</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Buttons preview and next -->
+      <section>
+        <div class="container mt-5 text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/cl-chevron-left.svg 3.png" id="secondBackBtn" alt="secondBackBtn">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid btnLeftAndRight" src="src/img/Group 4.png" id="secondForwardBtn" alt="secondForwardBtn">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <!-- Términos y condiciones-->
+    <section id="textConditions">
+      <header class="banner">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Política de Privacidad</h1>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <p>&nbsp;</p>
+        <p>La presente Política de Privacidad establece los términos en que <strong>iF Blanco</strong> usa y protege la información que es proporcionada
+          por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos
+          de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado,
+          lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política
+          de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente
+          esta página para asegurarse que está de acuerdo con dichos cambios.</p>
+        <p>
+          <strong>Información que es recogida</strong>
+        </p>
+        <p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp;
+          su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida
+          información específica para procesar algún pedido o realizar una entrega o facturación.</p>
+        <p>
+          <strong>Uso de la información recogida</strong>
+        </p>
+        <p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para
+          mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es
+          posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales,
+          nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún
+          beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados
+          en cualquier momento.
+        </p>
+        <p><strong>iF Blanco</strong> está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los
+          sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p>
+        <p>
+          <strong>Control de su información personal</strong>
+        </p>
+        <p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada
+          a nuestro sitio web.&nbsp; Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede
+          marcar o desmarcar la opción de recibir información por correo electrónico. &nbsp;En caso de que haya marcado la
+          opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.</p>
+        <p>Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento,
+          salvo que sea requerido por un juez con un orden judicial.</p>
+        <p><strong>iF Blanco</strong> Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 my-5 mx-auto">
+          <button type="button" class="btn btn-custom mx-auto d-block btn-sm">Aceptar</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Inicializando Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB1Tu-ClefIDA5lnEpjS1IMcuxjI492-9I",
+      authDomain: "if-visitor.firebaseapp.com",
+      databaseURL: "https://if-visitor.firebaseio.com",
+      projectId: "if-visitor",
+      storageBucket: "if-visitor.appspot.com",
+      messagingSenderId: "943782866392"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="controller.js"></script>
+</body>
+
 </html>
