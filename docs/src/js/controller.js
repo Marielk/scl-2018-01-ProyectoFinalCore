@@ -11,17 +11,18 @@ window.currentVisitorRegistration = () => {
   /* crear id para cada visitante */
   const newVisitorId = database.ref().child('visitor').push().key;
   const startedAt = firebase.database.ServerValue.TIMESTAMP;
+  let time = new Date().getTime();
+  let date = new Date(time).toLocaleString();
   // añadiendo una nueva coleccion
   database.ref(`visitors/${newVisitorId}`).set({
       id: newVisitorId,
-      name: 'mariel',
-      rut: '17.834.887-6',
-      visitorType: 'visita',
-      arrivingTime: new Date(),
-      goingTo: 'Laboratoria',
-      contact: 'Carla Cruz',
-      host: 'pepito Perez',
-      licensePlate: 'ASFJASF3741934',
+      rut: rut,
+      email: email,
+      licensePlate: licensePlate,
+      host: host,
+      goingTo: goingTo,
+      visitPurpose: visitPurpose,
+      arrivingTime: date
   });
 };
 
