@@ -56,7 +56,7 @@ acceptTerms.addEventListener('click', () => {
   textConditions.classList.add('disappear');
   arrivalNotification.classList.remove('disappear');
   arrivalNotification.classList.add('show');
-  window.currentVisitorRegistration();
+  window.validatePersonIdentity(rut);
 });
 
 thirdBackBtn.addEventListener('click', () => {

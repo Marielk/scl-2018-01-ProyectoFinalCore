@@ -8,6 +8,7 @@ const messaging = firebase.messaging();
 messaging.usePublicVapidKey('BIvOtXyPXyEhUFgKw9JaE0E7noalpNJvyvmI2krSmf6JFbDzwN3hBOBrfqb2RRzKpCIvYGgrKhlq2-qsYyx2b6c');
 //Guardar al visitante actual 
 let currentVisitorID = [];
+let currentVisitorName;
 //guardar al local Contact ID 
 let localContactRef; 
 // guardar local contact encontrado 
@@ -20,6 +21,7 @@ window.currentVisitorRegistration = () => {
   let date = new Date(time).toLocaleString();
   // añadiendo una nueva coleccion
   database.ref(`visitors/${newVisitorId}`).set({
+    visitorName: currentVisitorName,
     id: newVisitorId,
     rut: rut,
     email: email,
@@ -32,17 +34,18 @@ window.currentVisitorRegistration = () => {
   currentVisitorID.push(newVisitorId);
 };
 
-function validatePersonIdentity(){
-  const rut = '17834887-6';
+window.validatePersonIdentity = (rut) => {
   fetch(`https://api.rutify.cl/search?q=${rut}`)
     .then(response => response.json())
     .then(data => { 
-      console.log(data[0].name); // nombre completo de la visita sacado de la API   
+      currentVisitorName = data[0].name;
+      window.currentVisitorRegistration();
+      //console.log(data[0].name); // nombre completo de la visita sacado de la API   
     })
     .catch((e) => {
       console.log(e);
     });
-}
+};
 // ==========Funcion de elegir la empresa=========
 function chosenGoingTo(){
   let localContacts;
