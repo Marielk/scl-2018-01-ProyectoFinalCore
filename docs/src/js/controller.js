@@ -45,15 +45,29 @@ function validatePersonIdentity(){
 }
 // ==========Funcion de elegir la empresa=========
 function chosenGoingTo(){
+  let localContacts;
   //llamando a la referencia de data base
-  const referencia = database.ref('localContacts');
-  referencia.forEach((localContact) => {
-    //buscando al anfitrion en database
-    localContact.find(localContact.empresa === goingTo);
-    matchLocalContact = localContact.id;
-    console.log(matchLocalContact);
+  database.ref('localContacts').once('value')
+    .then((local) => {
+      local.forEach((localContact) => {  
+      const string = JSON.stringify(localContact);
+      const evaluar = string.includes('Laboratoria');
+      console.log(evaluar);
+      //console.log(JSON.stringify(local.nombre));
+      //console.log(localContacts);
+    });
   });
 }
+database.ref('localContacts').once('value')
+    .then((local) => {
+      local.forEach((localContact) => {  
+      const string = JSON.stringify(localContact);
+      const evaluar = string.search('Laboratoria');
+      console.log(evaluar);
+      //console.log(JSON.stringify(local.nombre));
+      //console.log(localContacts);
+    });
+  });
 
 // ==========Funciones avisar a la empresa========
 

@@ -43,7 +43,7 @@ body {
   text-align: center;
 }
 
-h1{
+h2{
   text-align: center;
   color: white;
   font-size: 2em; 
@@ -85,7 +85,6 @@ select.form-control:focus {
 .btnLeftAndRight{
   width: 5em;
   height: 5em;
-  
 }
 
 /* Register pag2 */
@@ -93,6 +92,54 @@ select.form-control:focus {
 #input2{
 margin-top: 8rem;
 }
+
+
+/* Términos y condiciones */
+.btn-secondary{
+  background-color: #F16420;
+  color: #ffffff;
+  border-radius: 0%;
+  border: #F16420;
+  font-size: 1rem;
+}
+
+/* fin terminos y condiciones */
+
+
+
+/* Ingreso visitante select*/
+
+#selectEmpresa{
+  margin-top: 3em;
+}
+
+#selectVisit{
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+
+/* Cierre ingreso visitante */
+
+
+/* Pantalla notificación llegada */
+
+#textVisit{
+  margin-top: 3em;
+  margin-left: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
