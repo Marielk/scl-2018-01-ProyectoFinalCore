@@ -8,21 +8,26 @@ const messaging = firebase.messaging();
 messaging.usePublicVapidKey('BIvOtXyPXyEhUFgKw9JaE0E7noalpNJvyvmI2krSmf6JFbDzwN3hBOBrfqb2RRzKpCIvYGgrKhlq2-qsYyx2b6c');
 //Guardar al visitante actual 
 let currentVisitorID = [];
+//guardar al local Contact ID 
+let localContactRef; 
+// guardar local contact encontrado 
+let matchLocalContact; 
 window.currentVisitorRegistration = () => {
   /* crear id para cada visitante */
   const newVisitorId = database.ref().child('visitor').push().key;
   const startedAt = firebase.database.ServerValue.TIMESTAMP;
+  let time = new Date().getTime();
+  let date = new Date(time).toLocaleString();
   // añadiendo una nueva coleccion
   database.ref(`visitors/${newVisitorId}`).set({
     id: newVisitorId,
-    name: 'mariel',
-    rut: '17.834.887-6',
-    visitorType: 'visita',
-    arrivingTime: new Date(),
-    goingTo: 'Laboratoria',
-    contact: 'Carla Cruz',
-    host: 'pepito Perez',
-    licensePlate: 'ASFJASF3741934',
+    rut: rut,
+    email: email,
+    licensePlate: licensePlate,
+    host: host,
+    goingTo: goingTo,
+    visitPurpose: visitPurpose,
+    arrivingTime: date
   });
   currentVisitorID.push(newVisitorId);
 };
@@ -39,7 +44,16 @@ function validatePersonIdentity(){
     });
 }
 // ==========Funcion de elegir la empresa=========
-
+function chosenGoingTo(){
+  //llamando a la referencia de data base
+  const referencia = database.ref('localContacts');
+  referencia.forEach((localContact) => {
+    //buscando al anfitrion en database
+    localContact.find(localContact.empresa === goingTo);
+    matchLocalContact = localContact.id;
+    console.log(matchLocalContact);
+  });
+}
 
 // ==========Funciones avisar a la empresa========
 
@@ -69,7 +83,7 @@ function createLocalContact(){
     email: currentLocalContact.email,
     empresa: 'Laboratoria'
   });
-
+  localContactRef = newLocalContactID;
 }
 function localContactON(){
   autentication.onAuthStateChanged((localContact) => {
