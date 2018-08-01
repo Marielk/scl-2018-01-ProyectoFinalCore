@@ -1,4 +1,4 @@
-# iF Visitor
+
 ![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/img/ifVisitor-logo.png)
 
 
@@ -26,7 +26,7 @@ De acuerdo a las entrevistas que realizamos al usuario administrador en este cas
 **El usuario visitante** es el que principalmente usará la aplicación y se registrará a través de un ipad o tablet. 
 
 ## **Diseño de Interfaz**
-En el proceso de diseño hicimos un estudio de referencia a organizaciones tales como Envoy, Welkio, 
+En el proceso de diseño hicimos un estudio de referencia a organizaciones tales como Envoy, Welkio. 
 Para el diseño de interfaz primeramente se usó balsamiq para el prototipo de baja fidelidad [ver el prototipo de la aplicación](https://balsamiq.cloud/svqidzb/pgd5wr0)
 Para ir analizando y viendo el proceso de lo que quería el usuario ver en el registro, y que no le parecía. Realizamos test de usabilidad con el prototipo de alta fidelidad realizado en proto.io ([ver el prototipo de la aplicación](https://pr.to/4Y7UNG/)) La razón por la que usamos proto es que la interacción y las funciones son mas reales, como si estuviera hecho en código.
 Puedes ver los videos acá [Test usabilidad con usuarios](https://drive.google.com/open?id=1f-Yp7WvS2NjzWAUNPdZqa3uKQBrjpMq7)
