@@ -1,3 +1,6 @@
+/* Global Variables */
+let rut, email, licensePlate, host, goingTo, visitPurpose;
+
 /* Functionality Buttons */
 newRegistrationBtn.addEventListener('click', () => {
   starterPage.classList.add('disappear');
@@ -25,6 +28,7 @@ firstForwardBtn.addEventListener('click', () => {
   personalUserInfo.classList.add('disappear');
   purposeUserInfo.classList.remove('disappear');
   purposeUserInfo.classList.add('show');
+  saveGlobalVariables();
 });
 
 secondBackBtn.addEventListener('click', () => {
@@ -39,6 +43,7 @@ secondForwardBtn.addEventListener('click', () => {
   purposeUserInfo.classList.add('disappear');
   textConditions.classList.remove('disappear');
   textConditions.classList.add('show');
+  saveGlobalVariables();
 });
 
 acceptTerms.addEventListener('click', () => {
@@ -46,6 +51,7 @@ acceptTerms.addEventListener('click', () => {
   textConditions.classList.add('disappear');
   arrivalNotification.classList.remove('disappear');
   arrivalNotification.classList.add('show');
+  currentVisitorRegistration();
 });
 
 thirdBackBtn.addEventListener('click', () => {
@@ -61,3 +67,14 @@ thirdForwardBtn.addEventListener('click', () => {
   arrivalNotification.classList.remove('disappear');
   arrivalNotification.classList.add('show');
 });
+
+function saveGlobalVariables() {
+  rutVisitor.value = rut;
+  emailVisitor.value = email;
+  licensePVisitor.value = licensePlate;
+  localHost.value = host;
+  business.value = goingTo;
+  purposeOfVisit.value = visitPurpose;
+}
+
+window.currentVisitorRegistration();
