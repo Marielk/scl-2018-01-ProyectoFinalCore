@@ -8,26 +8,21 @@ const messaging = firebase.messaging();
 messaging.usePublicVapidKey('BIvOtXyPXyEhUFgKw9JaE0E7noalpNJvyvmI2krSmf6JFbDzwN3hBOBrfqb2RRzKpCIvYGgrKhlq2-qsYyx2b6c');
 //Guardar al visitante actual 
 let currentVisitorID = [];
-//guardar al local Contact ID 
-let localContactRef; 
-// guardar local contact encontrado 
-let matchLocalContact; 
 window.currentVisitorRegistration = () => {
   /* crear id para cada visitante */
   const newVisitorId = database.ref().child('visitor').push().key;
   const startedAt = firebase.database.ServerValue.TIMESTAMP;
-  let time = new Date().getTime();
-  let date = new Date(time).toLocaleString();
   // añadiendo una nueva coleccion
   database.ref(`visitors/${newVisitorId}`).set({
     id: newVisitorId,
-    rut: rut,
-    email: email,
-    licensePlate: licensePlate,
-    host: host,
-    goingTo: goingTo,
-    visitPurpose: visitPurpose,
-    arrivingTime: date
+    name: 'mariel',
+    rut: '17.834.887-6',
+    visitorType: 'visita',
+    arrivingTime: new Date(),
+    goingTo: 'Laboratoria',
+    contact: 'Carla Cruz',
+    host: 'pepito Perez',
+    licensePlate: 'ASFJASF3741934',
   });
   currentVisitorID.push(newVisitorId);
 };
@@ -43,24 +38,16 @@ function validatePersonIdentity(){
       console.log(e);
     });
 }
-// ==========Funcion de elegir la empresa=========
-function chosenGoingTo(){
-  //llamando a la referencia de data base
-  const referencia = database.ref('localContacts');
-  referencia.forEach((localContact) => {
-    //buscando al anfitrion en database
-    localContact.find(localContact.empresa === goingTo);
-    matchLocalContact = localContact.id;
-    console.log(matchLocalContact);
-  });
-}
 
 // ==========Funciones avisar a la empresa========
 
 function signIn(){
   const provider = new firebase.auth.GoogleAuthProvider();
   autentication.signInWithPopup(provider).then(function (result) {
-    console.log('usuario registrado exitoso')
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    let token = result.credential.accessToken;
+    // The signed-in user info.
+    let user = result.user;
   })
     .catch(function (error) {
       console.log('entrar' + error);
@@ -73,21 +60,10 @@ function signIn(){
       let credential = error.credential;
     });
 }
-function createLocalContact(){
-  const currentLocalContact= autentication.currentUser;
-  const localName = currentLocalContact.displayName;
-  const newLocalContactID = database.ref().child('localContact').push().key;
-  database.ref(`localContacts/${newLocalContactID}`).set({
-    nombre: localName,
-    id: newLocalContactID ,
-    email: currentLocalContact.email,
-    empresa: 'Laboratoria'
-  });
-  localContactRef = newLocalContactID;
-}
-function localContactON(){
-  autentication.onAuthStateChanged((localContact) => {
-    if (localContact) {
+
+function userOn(){
+  autentication.onAuthStateChanged((user) => {
+    if (user) {
       // codigo de prueba 
       aceptNotifications();
       //Si estamos logueados 
@@ -106,16 +82,16 @@ function aceptNotifications(){
       console.log(token);
       database.ref('/tokens').push({
         token: token,
-        localContactid: autentication.currentUser.uid
+        uid: autentication.currentUser.uid
       });
     })
     .catch((err) => console.log('usuario sin permiso', err));
 }
 
 function sendNotification(){
-  const message = `Hola ${autentication.currentUser.displayName}, te informamos que ${database.ref(`visitors/${currentVisitorID}`).name} esta en recepción, confirma su entrada porfavor`; 
+  const message = `Hola ${autentication.currentUser.displayName}, te informamos que ${database.ref(`visitors/${currentVisitorID}`).name} esta en recepcion, confirma su entrada porfavor`; 
   database.ref('/notifications').push({
-    localContact: autentication.currentUser.displayName,
+    user: autentication.currentUser.displayName,
     message: message
   });
 }

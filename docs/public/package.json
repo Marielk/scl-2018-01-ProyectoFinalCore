@@ -1,0 +1,42 @@
+{
+  "name": "registro_visitantes",
+  "version": "1.0.0",
+  "description": "registro de visitantes proyecto final common core",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "eslint src test",
+    "test": "jest --coverage",
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --content-base dist/ --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "marielk"
+  },
+  "keywords": [
+    "visitantes",
+    "proyecto",
+    "registro"
+  ],
+  "author": "mariel, violeta, natalia",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.1",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "firebase": "^4.12.1",
+    "firebase-mock-v3": "^0.1.3"
+  }
+}
