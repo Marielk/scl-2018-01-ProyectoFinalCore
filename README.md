@@ -1,5 +1,5 @@
 # iF Visitor
-![alt text](/home/laboratoria-083/Documentos/scl-2018-01-ProyectoFinalCore/docs/src/img/ifVisitor-logo.png)
+![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/img/ifVisitor-logo.png)
 
 
 ## Preámbulo
