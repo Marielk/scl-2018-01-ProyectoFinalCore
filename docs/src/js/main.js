@@ -82,3 +82,12 @@ function saveGlobalVariables() {
   visitPurpose= document.getElementById('purposeOfVisit').value;
 }
 
+function goBackToStart() {
+  setTimeout(function(){
+    console.log('holi');
+    arrivalNotification.classList.add('disappear');
+    arrivalNotification.classList.remove('show');
+    starterPage.classList.remove('disappear');
+    starterPage.classList.add('show');
+  },3000);
+}
