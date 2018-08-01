@@ -38,16 +38,15 @@ function validatePersonIdentity(){
       console.log(e);
     });
 }
+// ==========Funcion de elegir la empresa=========
+
 
 // ==========Funciones avisar a la empresa========
 
-function singIn(){
+function signIn(){
   const provider = new firebase.auth.GoogleAuthProvider();
   autentication.signInWithPopup(provider).then(function (result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    let token = result.credential.accessToken;
-    // The signed-in user info.
-    let user = result.user;
+    console.log('usuario registrado exitoso')
   })
     .catch(function (error) {
       console.log('entrar' + error);
@@ -60,10 +59,21 @@ function singIn(){
       let credential = error.credential;
     });
 }
+function createLocalContact(){
+  const currentLocalContact= autentication.currentUser;
+  const localName = currentLocalContact.displayName;
+  const newLocalContactID = database.ref().child('localContact').push().key;
+  database.ref(`localContacts/${newLocalContactID}`).set({
+    nombre: localName,
+    id: newLocalContactID ,
+    email: currentLocalContact.email,
+    empresa: 'Laboratoria'
+  });
 
-function userOn(){
-  autentication.onAuthStateChanged((user) => {
-    if (user) {
+}
+function localContactON(){
+  autentication.onAuthStateChanged((localContact) => {
+    if (localContact) {
       // codigo de prueba 
       aceptNotifications();
       //Si estamos logueados 
@@ -82,7 +92,7 @@ function aceptNotifications(){
       console.log(token);
       database.ref('/tokens').push({
         token: token,
-        uid: autentication.currentUser.uid
+        localContactid: autentication.currentUser.uid
       });
     })
     .catch((err) => console.log('usuario sin permiso', err));
@@ -91,7 +101,7 @@ function aceptNotifications(){
 function sendNotification(){
   const message = `Hola ${autentication.currentUser.displayName}, te informamos que ${database.ref(`visitors/${currentVisitorID}`).name} esta en recepcion, confirma su entrada porfavor`; 
   database.ref('/notifications').push({
-    user: autentication.currentUser.displayName,
+    localContact: autentication.currentUser.displayName,
     message: message
   });
 }
