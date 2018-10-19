@@ -1,5 +1,4 @@
-
-![alt text](https://github.com/lyalatina/scl-2018-01-ProyectoFinalCore/blob/master/docs/src/img/ifVisitor-logo.png)
+# If-Visitor
 
 ## Preámbulo
 
